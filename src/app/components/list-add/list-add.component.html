@@ -1,0 +1,14 @@
+<h1 class="mb-3">Add your next task:</h1>
+<hr>
+
+<form>
+    <input 
+        type="text" 
+        placeholder="Type here your next task..." 
+        name="name"
+        class="form-control"
+        #textTask
+        (keyup.enter)="add(textTask.value, $event); textTask.value = ''"
+    >
+    <button type="button" class="btn btn-warning mt-3" (click)="add(textTask.value, $event); textTask.value = ''">Add to list</button>
+</form>
